@@ -17,7 +17,7 @@ class Scraping:
 
     def login(self):
         site = self.login_session.get(self.login_page)
-        login_data = {"username": self.login_user, "password": self.login_pass, "pos_no":"0"}
+        login_data = {"username": self.login_user, "password": self.login_pass}
         self.login_session.post(self.login_page, login_data)
 
     def getContent(self, url):
